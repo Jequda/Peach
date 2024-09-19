@@ -10,8 +10,16 @@ module.exports = {
     },
     mode: 'development',
     devServer: {
-        static: './dist',
+        static: [
+            {
+                directory: path.join(__dirname, 'public'), // Папка со статическими файлами
+            },
+            {
+                directory: path.join(__dirname, 'dist'), // Папка для выходных файлов
+            },
+        ],
         hot: true,
+
     },
     module: {
         rules: [
@@ -28,6 +36,18 @@ module.exports = {
                         presets: ['@babel/preset-env'],
                     },
                 },
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[hash].[ext]',
+                            outputPath: 'images/',
+                        },
+                    },
+                ],
             },
         ],
     },
