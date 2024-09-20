@@ -1,0 +1,21 @@
+.mission {
+  margin-top: 100px;
+  padding-top: 139px;
+  padding-bottom: 140px;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__title {
+    font-size: 56px;
+  }
+
+  &__text {
+    font-size: 32px;
+    max-width: 1080px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
