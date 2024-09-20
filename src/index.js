@@ -4,6 +4,7 @@ import { About } from './components/About/About'
 import { Map } from './components/Map/Map'
 import { Mission } from './components/Mission/Mission'
 import { Directions } from './components/Directions/Directions'
+import { Benefits } from './components/Benefits/Benefits'
 import './scss/global.scss'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     root.appendChild(Map());
     root.appendChild(Mission());
     root.appendChild(Directions());
+    root.appendChild(Benefits());
 });
