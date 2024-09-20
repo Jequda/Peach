@@ -3,6 +3,7 @@ import { Banner } from './components/Banner/Banner'
 import { About } from './components/About/About'
 import { Map } from './components/Map/Map'
 import { Mission } from './components/Mission/Mission'
+import { Directions } from './components/Directions/Directions'
 import './scss/global.scss'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     root.appendChild(About());
     root.appendChild(Map());
     root.appendChild(Mission());
+    root.appendChild(Directions());
 });
