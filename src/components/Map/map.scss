@@ -1,0 +1,47 @@
+.offices {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 70px 120px 70px;
+
+  font-weight: 600;
+  line-height: 20px;
+
+  &__title {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+  }
+}
+
+.arrow-2 {
+  position: relative;
+  margin-left: 18px;
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.arrow-2-top,
+.arrow-2-bottom {
+  background: rgb(68, 68, 68);
+  height: 3px;
+  position: absolute;
+  width: 12px;
+  right: 5px;
+}
+
+.arrow-2-top {
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+.arrow-2-bottom {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
