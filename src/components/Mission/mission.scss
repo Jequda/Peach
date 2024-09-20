@@ -1,0 +1,53 @@
+.mission {
+  &__heading {
+    text-align: center;
+    max-width: 890px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 120%;
+    white-space: normal;
+    &-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 200px;
+    }
+    &--red {
+      color: #a30c33;
+    }
+  }
+  &__container {
+    margin-top: 200px;
+    margin-bottom: 128px;
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+  &__row {
+    display: flex;
+    gap: 185px;
+    align-items: center;
+    justify-content: center;
+
+    &--secondary {
+      margin-top: 80px;
+      gap: 180px;
+    }
+  }
+  &__title {
+    font-size: 80px;
+    color: #a30c33;
+    margin: 0;
+    width: max-content;
+    height: max-content;
+    line-height: 1;
+  }
+  &__description {
+    color: #444444;
+    margin-top: 4px;
+    font-size: 18px;
+    width: 200px;
+  }
+}
+
+.break {
+  display: block;
+}
