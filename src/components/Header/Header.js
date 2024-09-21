@@ -5,9 +5,9 @@ export function Header() {
   const header = document.createElement('header');
   header.classList.add('header');
   header.innerHTML = `
-     
-        <img src="${logo}" alt="logo" /> <!-- Используйте импорт вместо относительного пути -->
-
+      <a href="https://softline.ru">
+        <img src="${logo}" alt="logo" />
+      </a>
       <nav class="header__nav">
         <p>Облачные решения</p>
         <p>Кибербезопасность</p>
