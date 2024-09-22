@@ -11,8 +11,75 @@ export function Map() {
         <div class="arrow-2">
           <span class="arrow-2-top"></span>
           <span class="arrow-2-bottom"></span>
+        </div>
+              <div class="offices__popup hidden">
+          <div class="region">
+          <span class="region-name">Москва</span>
+        </div>
+          <div class="region">
+          <span class="region-name">Центр</span>
+          <ul class="cities">
+            <li>Воронеж</li>
+            <li>Ярославль</li>
+            <li>Белгород</li>
+          </ul>
+        </div>
+          <div class="region">
+          <span class="region-name">Северо-Запад</span>
+          <ul class="cities">
+            <li>Санкт-Петербург</li>
+            <li>Калининград</li>
+          </ul>
+        </div>
+          <div class="region">
+          <span class="region-name">Юг</span>
+          <ul class="cities">
+            <li>Ростов-на-Дону</li>
+            <li>Краснодар</li>
+            <li>Волгоград</li>
+          </ul>
+        </div>
+          <div class="region">
+          <span class="region-name">Волга</span>
+          <ul class="cities">
+            <li>Казань</li>
+            <li>Самара</li>
+            <li>Уфа</li>
+            <li>Оренбург</li>
+            <li>Нижний Новгород</li>
+          </ul>
+        </div>
+          <div class="region">
+          <span class="region-name">Урал</span>
+          <ul class="cities">
+            <li>Екатеринбург</li>
+            <li>Челябинск</li>
+            <li>Пермь</li>
+            <li>Сургут</li>
+            <li>Тюмень</li>
+            <li>Ижевск</li>
+          </ul>
+        </div>
+          <div class="region">
+          <span class="region-name">Сибирь</span>
+          <ul class="cities">
+            <li>Новосибирск</li>
+            <li>Омск</li>
+            <li>Томск</li>
+            <li>Красноярск</li>
+            <li>Иркутск</li>
+          </ul>
+        </div>
+          <div class="region">
+          <span class="region-name">Дальний Восток</span>
+          <ul class="cities">
+            <li>Хабаровск</li>
+            <li>Владивосток</li>
+          </ul>
+        </div>
         </div> 
-      </div> 
+     </div>
+
       <nav class="offices__nav">
         <p class="offices__nav-item active" data-region="all">Все</p>
         <p class="offices__nav-item" data-region="Москва">Москва</p>
@@ -26,61 +93,67 @@ export function Map() {
       </nav>
     </div> 
     <div class="map__container">
-        <canvas id="mapCanvas" width="1290" height="650" style="background-image: url('${map}'); background-size: cover;"></canvas>
+        <canvas id="mapCanvas" width="1290" height="650"  style="background-image: url('${map}'); background-repeat: no-repeat;"></canvas>
     </div>
   `;
 
   const cities = {
     all: [
-      { name: 'Москва', lat: 21.7558, lon: -135.9173 },
-      { name: 'Санкт-Петербург', lat: 48.9343, lon: -133.9086 },
-      { name: 'Новосибирск', lat: -49.0302, lon: -22.9206 },
-      { name: 'Екатеринбург', lat: -9.8389, lon: -80.6005 },
-      { name: 'Н. Новгород', lat: 16.3243, lon: -121.0027 },
-      { name: 'Калининград', lat: 51.9343, lon: -166.9086 },
-      { name: 'Ярославль', lat: 29.7558, lon: -123.9173 },
-      { name: 'Воронеж', lat: 14.7558, lon: -151.4173 },
-      { name: 'Белгород', lat: 4.7558, lon: -151.4173 },
-      { name: 'Ростов-на-Дону', lat: -4.7558, lon: -154.4173 },
-      { name: 'Волгоград', lat: -20.7558, lon: -147.4173 },
-      { name: 'Краснодар', lat: -24.7558, lon: -163.4173 },
-      { name: 'Самара', lat: -2.3243, lon: -122.0027 },
-      { name: 'Казань', lat: -1.3243, lon: -103.0027 },
-      { name: 'Уфа', lat: -13.3243, lon: -102.0027 },
-      { name: 'Оренбург', lat: -20.3243, lon: -112.0027 },
-      { name: 'Ижевск', lat: 2.8389, lon: -79.6005 },
-      { name: 'Челябинск', lat: -20.8389, lon: -81.6005 },
+      { name: 'Москва', lat: 26.7558, lon: -139.2173 },
+      { name: 'Ярославль', lat: 33.7558, lon: -128.9173 },
+      { name: 'Воронеж', lat: 19.7558, lon: -152.4173 },
+      { name: 'Белгород', lat: 11.7558, lon: -153.4173 },
+      { name: 'Санкт-Петербург', lat: 51.9343, lon: -136.9086 },
+      { name: 'Калининград', lat: 54.9343, lon: -167.9086 },
+      { name: 'Ростов-на-Дону', lat: 0.0558, lon: -156.4173 },
+      { name: 'Волгоград', lat: -10.7558, lon: -149.4173 },
+      { name: 'Краснодар', lat: -14.7558, lon: -166.4173 },
+      { name: 'Н. Новгород', lat: 16.3243, lon: -125.0027 },
+      { name: 'Самара', lat: 4.3243, lon: -127.0027 },
+      { name: 'Казань', lat: 5.3243, lon: -110.0027 },
+      { name: 'Уфа', lat: -3.3243, lon: -109.0027 },
+      { name: 'Оренбург', lat: -12.3243, lon: -118.0027 },
+      { name: 'Ижевск', lat: 7.8389, lon: -85.6005 },
+      { name: 'Челябинск', lat: -11.8389, lon: -88.6005 },
       { name: 'Пермь', lat: 0.1389, lon: -63.6005 },
       { name: 'Сургут', lat: -3.8389, lon: -48.6005 },
       { name: 'Тюмень', lat: -19.8389, lon: -54.6005 },
-      { name: 'Омск', lat: -54.0302, lon: -39.9206 },
-      { name: 'Томск', lat: -49.9302, lon: -2.9206 },
-      { name: 'Красноярск', lat: -49.0302, lon: 12.9206 },
-      { name: 'Иркутск', lat: -59.0302, lon: 28.9206 },
-      { name: 'Хабаровск', lat: -60.0302, lon: 118.9206 },
-      { name: 'Владивосток', lat: -84.0302, lon: 114.9206 },
+      { name: 'Екатеринбург', lat: -2.8389, lon: -88.6005 },
+      { name: 'Омск', lat: -42.0302, lon: -49.9206 },
+      { name: 'Томск', lat: -37.9302, lon: -17.9206 },
+      { name: 'Красноярск', lat: -37.0302, lon: -0.9206 },
+      { name: 'Иркутск', lat: -48.0302, lon: 15.9206 },
+      { name: 'Новосибирск', lat: -37.0302, lon: -34.9206 },
+      { name: 'Хабаровск', lat: -50.0302, lon: 94.9206 },
+      { name: 'Владивосток', lat: -70.0302, lon: 91.9206 },
     ],
-    Москва: [{ name: 'Москва', lat: 21.7558, lon: -135.9173 }],
-    Центр: [{ name: 'Ярославль', lat: 29.7558, lon: -123.9173 }, { name: 'Воронеж', lat: 14.7558, lon: -151.4173 }, { name: 'Белгород', lat: 4.7558, lon: -151.4173 }],
-    'Северо-Запад': [{ name: 'Санкт-Петербург', lat: 48.9343, lon: -133.9086 }, { name: 'Калининград', lat: 51.9343, lon: -166.9086 }],
-    Юг: [{ name: 'Ростов-на-Дону', lat: -4.7558, lon: -154.4173 },
-    { name: 'Волгоград', lat: -20.7558, lon: -147.4173 },
-    { name: 'Краснодар', lat: -24.7558, lon: -163.4173 }],
-    Волга: [{ name: 'Н. Новгород', lat: 16.3243, lon: -121.0027 }, { name: 'Самара', lat: -2.3243, lon: -122.0027 },
-    { name: 'Казань', lat: -1.3243, lon: -103.0027 },
-    { name: 'Уфа', lat: -13.3243, lon: -102.0027 },
-    { name: 'Оренбург', lat: -20.3243, lon: -112.0027 }],
-    Урал: [{ name: 'Ижевск', lat: 2.8389, lon: -79.6005 },
-    { name: 'Челябинск', lat: -20.8389, lon: -81.6005 },
+    Москва: [{ name: 'Москва', lat: 26.7558, lon: -139.2173 },],
+    Центр: [{ name: 'Ярославль', lat: 33.7558, lon: -128.9173 },
+    { name: 'Воронеж', lat: 19.7558, lon: -152.4173 },
+    { name: 'Белгород', lat: 11.7558, lon: -153.4173 },],
+    'Северо-Запад': [{ name: 'Санкт-Петербург', lat: 51.9343, lon: -136.9086 },
+    { name: 'Калининград', lat: 54.9343, lon: -167.9086 },],
+    Юг: [{ name: 'Ростов-на-Дону', lat: 0.0558, lon: -156.4173 },
+    { name: 'Волгоград', lat: -10.7558, lon: -149.4173 },
+    { name: 'Краснодар', lat: -14.7558, lon: -166.4173 },],
+    Волга: [{ name: 'Н. Новгород', lat: 16.3243, lon: -125.0027 },
+    { name: 'Самара', lat: 4.3243, lon: -127.0027 },
+    { name: 'Казань', lat: 5.3243, lon: -110.0027 },
+    { name: 'Уфа', lat: -3.3243, lon: -109.0027 },
+    { name: 'Оренбург', lat: -12.3243, lon: -118.0027 },],
+    Урал: [{ name: 'Ижевск', lat: 7.8389, lon: -85.6005 },
+    { name: 'Челябинск', lat: -11.8389, lon: -88.6005 },
     { name: 'Пермь', lat: 0.1389, lon: -63.6005 },
     { name: 'Сургут', lat: -3.8389, lon: -48.6005 },
-    { name: 'Тюмень', lat: -19.8389, lon: -54.6005 }, { name: 'Екатеринбург', lat: -9.8389, lon: -80.6005 }],
-    Сибирь: [{ name: 'Омск', lat: -54.0302, lon: -39.9206 },
-    { name: 'Томск', lat: -49.9302, lon: -2.9206 },
-    { name: 'Красноярск', lat: -49.0302, lon: 12.9206 },
-    { name: 'Иркутск', lat: -59.0302, lon: 28.9206 }, { name: 'Новосибирск', lat: -49.0302, lon: -22.9206 }],
-    'Дальний восток': [{ name: 'Хабаровск', lat: -60.0302, lon: 118.9206 },
-    { name: 'Владивосток', lat: -84.0302, lon: 114.9206 }]
+    { name: 'Тюмень', lat: -19.8389, lon: -54.6005 },
+    { name: 'Екатеринбург', lat: -2.8389, lon: -88.6005 },],
+    Сибирь: [{ name: 'Омск', lat: -42.0302, lon: -49.9206 },
+    { name: 'Томск', lat: -37.9302, lon: -17.9206 },
+    { name: 'Красноярск', lat: -37.0302, lon: -0.9206 },
+    { name: 'Иркутск', lat: -48.0302, lon: 15.9206 },
+    { name: 'Новосибирск', lat: -37.0302, lon: -34.9206 },],
+    'Дальний восток': [{ name: 'Хабаровск', lat: -50.0302, lon: 94.9206 },
+    { name: 'Владивосток', lat: -70.0302, lon: 91.9206 },]
   };
 
   const mapCanvas = section.querySelector('#mapCanvas');
@@ -135,6 +208,13 @@ export function Map() {
 
       drawPoints(region);
     });
+  });
+
+  const title = section.querySelector('.offices__title');
+  const popup = section.querySelector('.offices__popup');
+
+  title.addEventListener('click', () => {
+    popup.classList.toggle('hidden');
   });
 
   return section;
