@@ -6,13 +6,16 @@ export function Map() {
   section.classList.add('map');
   section.innerHTML = `
     <div class="offices">
-      <div> 
+    <div class="offices__overlay hidden"></div>
+      <div>
+       <div class="offices__title-container">
         <p class="offices__title">Офисы Softline</p>
-        <div class="arrow-2">
-          <span class="arrow-2-top"></span>
-          <span class="arrow-2-bottom"></span>
+        <div class="offices__arrow">
+          <span class="offices__arrow-top"></span>
+          <span class="offices__arrow-bottom"></span>
         </div>
-              <div class="offices__popup hidden">
+        </div>
+           <div class="offices__popup hidden">
           <div class="region">
           <span class="region-name">Москва</span>
         </div>
@@ -210,11 +213,22 @@ export function Map() {
     });
   });
 
-  const title = section.querySelector('.offices__title');
+  const title = section.querySelector('.offices__title-container');
   const popup = section.querySelector('.offices__popup');
+  const overlay = section.querySelector('.offices__overlay');
 
   title.addEventListener('click', () => {
     popup.classList.toggle('hidden');
+    overlay.classList.toggle('hidden');
+  });
+
+  const regions = section.querySelectorAll('.region');
+
+  regions.forEach(region => {
+    const regionName = region.querySelector('.region-name');
+    regionName.addEventListener('click', () => {
+      region.classList.toggle('open');
+    });
   });
 
   return section;

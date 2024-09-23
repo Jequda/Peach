@@ -65,5 +65,13 @@ export function Directions() {
         directionsContainer.appendChild(item);
     });
 
+    const cards = section.querySelectorAll('.business__item');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('active');
+        });
+    });
+
     return section;
 }

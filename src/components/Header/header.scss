@@ -8,9 +8,32 @@
     gap: 20px;
     color: #444444;
     font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
   }
   a {
     align-items: center;
     display: flex;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    padding: 0;
+    display: block;
+    padding-top: 15px;
+
+    &__nav {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      line-height: 16px;
+      gap: 5px 10px;
+      margin: 16px 0px;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
   }
 }

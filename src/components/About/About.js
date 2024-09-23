@@ -25,17 +25,16 @@ export function About() {
             <h1 class="about__title">25</h1>
             <p class="about__description">городов России</p>
           </div>
-        </div>
-        <div class="about__row about__row--secondary">
+        
           <div class="about__item">
             <h1 class="about__title">2000 +</h1>
             <p class="about__description">разработчиков</p>
           </div>
           <div class="about__item">
             <h1 class="about__title">3000 +</h1>
-            <p class="about__description">сотрудников ежегодно проходят оценку и обучение</p>
+            <p class="about__description">сотрудников ежегодно <span class="break--mobile"> проходят оценку и обучение </span></p>
           </div>
-        </div>
+          </div>
       </div>
     `;
   return section;

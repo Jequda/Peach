@@ -47,3 +47,37 @@
     margin-top: 0;
   }
 }
+
+@media (max-width: 320px) {
+  .benefits {
+    &__title {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 100%;
+    }
+
+    &__items,
+    .motivation__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 43px 0;
+      justify-items: center;
+      margin: 0px 10px;
+    }
+
+    &__item,
+    .motivation__item {
+      &:last-child {
+        grid-column: span 2;
+      }
+    }
+  }
+  .motivation {
+    &__title,
+    &__subtitle {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 120%;
+    }
+  }
+}
