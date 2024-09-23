@@ -1,0 +1,16 @@
+<svg width="110.000000" height="110.000000" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<g opacity="0.050000">
+		<circle id="Ellipse 1" cx="55.000000" cy="55.000000" r="55.000000" fill="#000000" fill-opacity="1.000000"/>
+	</g>
+	<g opacity="0.900000">
+		<rect id="Frame 18625238" rx="-0.500000" width="47.000000" height="47.000000" transform="translate(31.500000 31.500000)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Rectangle 9046" d="M72 41.79C74.06 41.79 75.79 43.37 75.98 45.43L78.59 73.82C78.81 76.17 76.96 78.19 74.61 78.19L35.52 78.19C33.11 78.19 31.25 76.09 31.55 73.7L35.03 45.31C35.28 43.3 36.98 41.79 39 41.79L72 41.79Z" stroke="#B01736" stroke-opacity="1.000000" stroke-width="2.000000"/>
+		<path id="Vector 201" d="M55 50.63L55 69.35" stroke="#B01736" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+		<path id="Vector 202" d="M45.15 59.99L64.84 59.99" stroke="#B01736" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linecap="round"/>
+		<path id="Rectangle 9047" d="M45.39 41.79L45.39 35.59C45.39 33.39 47.18 31.59 49.39 31.59L60.59 31.59C62.8 31.59 64.59 33.39 64.59 35.59L64.59 41.79" stroke="#B01736" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	</g>
+</svg>
